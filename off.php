@@ -36,7 +36,7 @@
       <input type="button" value="Connexion" title="Connexion" id="btn_connexion" class="index_class_4 cursor_pointer"
         onclick="information_user_btn(this)">
       <input type="button" value="Inscription" title="Inscription" id="btn_inscription"
-        class="index_class_5 cursor_pointer" onclick="information_user_btn2(this)">
+        class="index_class_5 cursor_pointer" onclick="information_user_btn(this)">
 <a href="">Mot de passe oublié</a>
 
     </div>
@@ -46,12 +46,13 @@
 </div> 
 
 </div>
+
+<div class="alert alert-primary display_none" role="alert" id="information_user_btn_info"></div>
 <div id="login_user_information" style="margin-bottom:150px"></div>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  
- <script src="home_page.js"></script>
-<link rel="stylesheet" href="home_page.css">
+ 
  
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
@@ -198,9 +199,51 @@ return result ;
   }
 </style>
 </body>
-<?php 
+ <script>
+  function information_user_btn(_this) {
 
 
-//include("blog2.php") ; 
-?>
+  const information_user_login = document.getElementById("information_user_login").value ; 
+  const information_user_password = document.getElementById("information_user_password").value ;   
  
+
+
+switch(_this.id) {
+  case "btn_connexion":
+
+ var ok = new Information("sing_in/information_user_btn.php"); // création de la classe 
+  ok.add("information_user_login", information_user_login); // ajout de l'information pour lenvoi 
+  ok.add("information_user_password", information_user_password); // ajout d'une deuxieme information denvoi  
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+ 
+    break;
+  case "btn_inscription":
+ 
+
+    // code block
+    break;
+  default:
+    // code block
+}
+
+
+const myTimeout = setTimeout(myGreeting, 250);
+
+function myGreeting() {
+  Ajax("information_user_btn_info","info/information_user_btn_info.php");
+  document.getElementById("information_user_btn_info").className="alert alert-primary" ; 
+}
+
+
+
+
+    
+  }
+ </script>
+
+<style>
+  input{
+    color:black ; 
+  }
+</style>
