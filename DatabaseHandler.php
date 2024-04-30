@@ -41,6 +41,7 @@ class DatabaseHandler {
                 }
             } else {
                 echo "Aucune table trouvee dans la base de donnees '$database'.";
+                $this->tableList = false ; 
             }
 
             $this->connection->close();
@@ -134,6 +135,41 @@ class DatabaseHandler {
         $this->connection_child->close();
     }
 
+
+    function existe_table($dbname){
+
+
+     
+// Connexion à MySQL en utilisant les informations d'identification
+  
+
+// Vérification de la connexion
+if ($this->connection ->connect_error) {
+    die("La connexion a échoué : " . $this->connection ->connect_error);
+}
+
+// Nom de la base de données à vérifier
+ 
+
+// Requête pour vérifier si la base de données existe
+$sql = "SHOW DATABASES LIKE '$dbname'";
+$result = $this->connection ->query($sql);
+
+if ($result->num_rows > 0) {
+   return true ; 
+} else {
+    return 0 ; 
+
+}
+
+// Fermer la connexion
+$this->connection ->close();
+
+
+ 
+    }
+
+
     function set_column_names($column_names){
         array_push($this->column_names,$column_names);
     }
@@ -179,7 +215,14 @@ class DatabaseHandler {
     }
 }
 
+/*
 $databaseHandler = new DatabaseHandler("root", "root");
+
+
+
+ 
+
+
 
 $databaseHandler->getTables("root");
 
@@ -224,4 +267,6 @@ $databaseHandler->set_column_types("VARCHAR(30) NOT NULL");
 $databaseHandler->set_column_types("VARCHAR(50)");
 $databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
 $databaseHandler->add_table("xxxX");
+
+*/
 ?>
