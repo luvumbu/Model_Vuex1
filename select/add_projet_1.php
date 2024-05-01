@@ -11,14 +11,14 @@ $information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ;
 $_SESSION["liste_projet_admin_sha1_parent"] =$_SESSION["liste_projet_admin_id_sha1"];
 
  
-echo $_SESSION["liste_projet_admin_sha1_parent"] ; 
+ 
 $databaseHandler = new DatabaseHandler($username, $password);
 
 $databaseHandler->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$information_user_id_sha1." ","liste_projet_admin_id");
 
 
 
- var_dump($databaseHandler->tableList_info);
+ 
 
 
 /*
@@ -164,8 +164,8 @@ body {
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
-    <div>
-    <img width="50" height="50" src="https://img.icons8.com/ios/50/add--v1.png" alt="add--v1" class="cursor_pointer" onclick="add_projet_1_plus()"/>
+    <div onclick="add_projet_1_plus(this)">
+    <img width="50" height="50" src="https://img.icons8.com/ios/50/add--v1.png" alt="add--v1" class="cursor_pointer" />
     add elment
     </div>
   </div>
