@@ -8,10 +8,10 @@ $information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ;
 
  
  
+$_SESSION["liste_projet_admin_sha1_parent"] =$_SESSION["liste_projet_admin_id_sha1"];
+
  
-
-echo $_SESSION["liste_projet_admin_id_sha1"] ; 
-
+echo $_SESSION["liste_projet_admin_sha1_parent"] ; 
 $databaseHandler = new DatabaseHandler($username, $password);
 
 $databaseHandler->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$information_user_id_sha1." ","liste_projet_admin_id");

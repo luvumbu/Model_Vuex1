@@ -8,7 +8,9 @@ $information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ;
 
 $liste_projet_admin_add_projet_value =$_SESSION["liste_projet_admin_add_projet_value"] ; 
 
-echo $liste_projet_admin_add_projet_value ; 
+ 
+
+$_SESSION["liste_projet_admin_sha1_parent"] =  $liste_projet_admin_add_projet_value ;
 
 $databaseHandler = new DatabaseHandler($username, $password);
 
