@@ -39,48 +39,18 @@ echo "<br/>" ;
 */
 ?>
 
+ 
 
-<div class="container-fluid mt-3 text-center">
+<select id="add_projet" class="form-select form_style1"  aria-label="Default select example">
+ 
+  <option value="1">Blog</option>
+  <option value="2">CV</option>
+  <option value="3">Images</option>
+  <option value="3">Projet</option>
 
-<div class="row">
-  <div id="4" class="col p-3">
-    <img width="50" class="cursor_pointer" height="50" src="src/img/external-blog-graphic-design-justicon-lineal-justicon.png" alt="external-blog-graphic-design-justicon-lineal-justicon"/>
-  <a href="" class="red_on">17</a>
-    <p>
-  BLOG
+</select>
 
-
-</p>
-  </div>
-  <div id="4" class="col p-3">
-   
-    <img width="50" class="cursor_pointer" height="50" src="src/img/parse-from-clipboard.png" alt="parse-from-clipboard"/>
-<a href="" class="red_on">0</a>
-  <p>CV </p>
-  </div>
-  <div id="4" class="col p-3">
-   
-  <img width="50"   class="cursor_pointer" height="50" src="src/img/stack-of-photos--v1.png" alt="stack-of-photos--v1"/>       <a href="" class="red_on">0</a>
-  <p>
-    IMAGES
-
-  </p>  
- </div>
-
-
-
-
-<div id="4" class="col p-3">
-<img width="50" height="50" class="cursor_pointer"  src="src/img/barbershop.png" alt="barbershop"/>
-<a href="" class="red_on">0</a>
-
-<p>
-COIFFURE
-
-</p>
-</div>
-</div>
-</div>
+<div type="button" class="form_style2" onclick="add_projet()">VALIDER</div>
 
 <style>
   .red_on{
@@ -94,5 +64,19 @@ COIFFURE
  
 
   }
+  .form_style1,  .form_style2{
+    width:50%;
+    margin:auto ; 
+    margin-top: 50px; 
+  }
+  .form_style2{
+    background-color: #1d1e4d;
+    color:white ; 
+    padding: 5px; 
+    text-align: center;
+    border-radius: 7px;
+  }
  
 </style>
+
+ 
