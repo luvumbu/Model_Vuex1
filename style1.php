@@ -16,7 +16,10 @@
     <div onclick="action_row(this)" id="1" class="col p-3">1</div>
     <div onclick="action_row(this)" id="2" class="col p-3">2</div>
     <div onclick="action_row(this)" id="3" class="col p-3">3</div>
-    <div onclick="action_row(this)" id="4" class="col p-3">4</div>
+    <div>
+<a href="session_destroy.php">4</a>
+    </div>
+    
   </div>
 </div>
 
