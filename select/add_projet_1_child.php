@@ -57,13 +57,13 @@ $databaseHandler_5->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `
       ?>
 
 <div class="header">
-  <h2> <input type="text"  value="<?php echo $databaseHandler_1->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_1" ?>"></h2>
+  <h2> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_1->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_1" ?>"></h2>
 </div>
 
-<h2><input type="text"  value="<?php echo $databaseHandler_2->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_2" ?>"></h2>
-      <h5><input type="text"  value="<?php echo $databaseHandler_3->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_3" ?>"></h5>
+<h2><input  type="text"  placeholder="TITLE HEADING"  value="<?php echo $databaseHandler_2->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_2" ?>"></h2>
+      <h5><input  placeholder="Title description, Dec 7, 2017" type="text"  value="<?php echo $databaseHandler_3->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_3" ?>"></h5>
       <div class="fakeimg" style="height:200px;">Image</div>
-      <p><input type="text"  value="<?php echo $databaseHandler_4->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_4" ?>"></p>
+      <p><input  placeholder="Some text.." type="text" type="text"  value="<?php echo $databaseHandler_4->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_4" ?>"></p>
       <p><input type="text"  value="<?php echo $databaseHandler_5->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_5" ?>">
 
       <?php

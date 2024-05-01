@@ -143,17 +143,17 @@ body {
 <body>
 
 <div class="header">
-  <h2> <input type="text"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_1" ?>"></h2>
+  <h2> <input placeholder="Blog Name" type="text"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_1" ?>"></h2>
 </div>
 
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2> <input type="text"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)"    id="<?php echo $liste_projet_admin_add_projet_value."_2" ?>"></h2>
-      <h5><input type="text"    title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_3" ?>"></h5>
+      <h2> <input placeholder="TITLE HEADING" type="text"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)"    id="<?php echo $liste_projet_admin_add_projet_value."_2" ?>"></h2>
+      <h5><input  placeholder="Title description, Dec 7, 2017" type="text"    title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_3" ?>"></h5>
       <div class="fakeimg" style="height:200px;">Image</div>
-      <p> <input type="text"    title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_4" ?>"></p>
-      <p>      <textarea name=""   style="height:200px"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_5" ?>">
+      <p> <input placeholder="Some text.." type="text"    title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_4" ?>"></p>
+      <p>      <textarea     style="height:200px"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_5" ?>">
       </textarea>  
     </div>
 
