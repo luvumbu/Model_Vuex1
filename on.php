@@ -20,7 +20,7 @@ require_once 'style1.php';
 
   const myTimeout = setTimeout(myGreeting, 250);
 
-  const myTimeout2 = setTimeout(myGreeting2, 300);
+  const myTimeout2 = setTimeout(myGreeting2, 500);
 
 function myGreeting() {
   
@@ -55,12 +55,10 @@ function myGreeting2() {
         const liste_projet_admin_name3 = document.getElementById(_this.title+'_3').value ; 
         const liste_projet_admin_name4 = document.getElementById(_this.title+'_4').value ; 
         const liste_projet_admin_name5 = document.getElementById(_this.title+'_5').value ; 
- ; 
+ 
 
 
-
-
-
+ 
 
 
 
@@ -77,6 +75,13 @@ function myGreeting2() {
 
 
 
+
+
+    }
+
+
+    function add_projet_1_plus() {
+    Ajax("add_projet_1_child", "add/add_projet_1_child.php");
 
 
     }

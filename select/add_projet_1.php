@@ -6,13 +6,15 @@ require_once '../config.php';
 
 $information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ; 
 
-$liste_projet_admin_add_projet_value =$_SESSION["liste_projet_admin_add_projet_value"] ; 
+ 
+ 
+ 
 
-echo $liste_projet_admin_add_projet_value ; 
+echo $_SESSION["liste_projet_admin_id_sha1"] ; 
 
 $databaseHandler = new DatabaseHandler($username, $password);
 
-$databaseHandler->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_add_projet_value." ","liste_projet_admin_id");
+$databaseHandler->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$information_user_id_sha1." ","liste_projet_admin_id");
 
 
 
@@ -154,12 +156,17 @@ body {
       <p>      <textarea name=""   style="height:200px"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_5" ?>">
       </textarea>  
     </div>
+
     <div class="card" id="add_projet_1_child">
       <h2>TITLE HEADING ok</h2>
       <h5>Title description, Sep 2, 2017</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div>
+    <img width="50" height="50" src="https://img.icons8.com/ios/50/add--v1.png" alt="add--v1" class="cursor_pointer" onclick="add_projet_1_plus()"/>
+    add elment
     </div>
   </div>
   <div class="rightcolumn">
