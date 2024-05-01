@@ -41,7 +41,7 @@ const password = document.getElementById("password").value;
   const myTimeout = setTimeout(myGreeting, 250);
 
 function myGreeting() {
-  location.reload();
+  
 }
 
 

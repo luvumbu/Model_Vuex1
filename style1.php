@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <script src="js.js"></script>
+ 
   
 <div class="container-fluid mt-3 text-center">
  
@@ -25,7 +25,7 @@
 
  
 
-<div id="01">TEST</div>
+<div id="01"></div>
 
    
 
@@ -51,6 +51,7 @@
 
                                         function myGreeting() {
                                             Ajax("01","select/01_data.php");
+                                
 
                                         }
 

@@ -233,6 +233,8 @@ const myTimeout = setTimeout(myGreeting, 250);
 function myGreeting() {
   Ajax("information_user_btn_info","info/information_user_btn_info.php");
   document.getElementById("information_user_btn_info").className="alert alert-primary" ; 
+location.reload();
+
 }
 
 
