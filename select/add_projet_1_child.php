@@ -6,7 +6,7 @@ require_once '../config.php';
 
 $information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ; 
 
-$liste_projet_admin_add_projet_value =$_SESSION["liste_projet_admin_add_projet_value"] ; 
+ 
 
  
 
@@ -45,7 +45,7 @@ $databaseHandler_5->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `
 
 
  
-
+$img ="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/g/h/y/medium-god-budhha-art-posters-gautam-buddha-hd-god-photo-original-imagp4btfeburhun.jpeg?q=90&crop=false";
  
 
 
@@ -62,7 +62,11 @@ $databaseHandler_5->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `
 
 <h2><input  type="text"  placeholder="TITLE HEADING"  value="<?php echo $databaseHandler_2->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_2" ?>"></h2>
       <h5><input  placeholder="Title description, Dec 7, 2017" type="text"  value="<?php echo $databaseHandler_3->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_3" ?>"></h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
+  
+
+      <div class="div_img cursor_pointer" onclick="change_img(this)" title="<?php echo $databaseHandler->tableList_info[$a] ?>">
+        <img src="<?php echo $img ?>" alt="" srcset="">
+      </div>
       <p><input  placeholder="Some text.." type="text" type="text"  value="<?php echo $databaseHandler_4->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_4" ?>"></p>
       <p><input type="text"  value="<?php echo $databaseHandler_5->tableList_info[$a] ?>" title="<?php echo $databaseHandler->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler->tableList_info[$a]."_5" ?>">
 
@@ -90,7 +94,17 @@ echo "<br/>" ;
 */
 ?>
  
-
+<style>
+      .div_img{
+            width:100%;
+            background-color:black ; 
+            text-align: center;
+           
+      }
+      .div_img img{
+            width:80%;
+      }
+</style>
 
 
 

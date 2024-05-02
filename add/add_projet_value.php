@@ -17,4 +17,8 @@ $_SESSION["liste_projet_admin_id_sha1"] = $time ;
  
 $_SESSION["liste_projet_admin_add_projet_value"] = $liste_projet_admin_add_projet_value ;
 
+if(isset($_SESSION["name2"])){
+    unset($_SESSION["name2"]);
+}
+
 ?>

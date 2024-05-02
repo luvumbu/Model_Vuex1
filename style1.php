@@ -85,7 +85,7 @@
           const myTimeout = setTimeout(myGreeting, 205);
 
           function myGreeting() {
-            Ajax("01", "select/01_data.php");
+           // Ajax("01", "select/01_data.php");
 
 
           }

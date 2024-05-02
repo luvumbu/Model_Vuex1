@@ -1,49 +1,48 @@
 <?php
+
+
+
 session_start() ; 
 
 require_once '../DatabaseHandler.php';
 require_once '../config.php';
-
-$information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ; 
-
- 
- 
-$_SESSION["liste_projet_admin_sha1_parent"] =$_SESSION["liste_projet_admin_id_sha1"];
+$liste_projet_admin_id_sha1 =   $_SESSION["liste_projet_admin_id_sha1"] ; 
 
  
  
-$databaseHandler = new DatabaseHandler($username, $password);
+$img ="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/g/h/y/medium-god-budhha-art-posters-gautam-buddha-hd-god-photo-original-imagp4btfeburhun.jpeg?q=90&crop=false";
+ 
 
-$databaseHandler->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$information_user_id_sha1." ","liste_projet_admin_id");
-
-
-
+ 
  
 
 
-/*
+$databaseHandler_0 = new DatabaseHandler($username, $password);
+
+$databaseHandler_0->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1 ." ","liste_projet_admin_id_sha1");
 
 
-echo $_SESSION["information_user_name_1"]  ;
-echo "<br/>" ; 
-echo $_SESSION["information_user_name_2"] ;  
-echo "<br/>" ; 
-echo $_SESSION["information_user_password"]  ;  
-echo "<br/>" ; 
-echo $_SESSION["information_user_img"] ;  
-echo "<br/>" ; 
-echo $_SESSION["information_user_born"]   ;  
-echo "<br/>" ; 
-echo $_SESSION["information_user_number_1"]   ;  
-echo "<br/>" ; 
-echo $_SESSION["information_user_id_sha1"]   ; 
-echo "<br/>" ; 
-echo $_SESSION["information_user_login"]   ; 
-echo "<br/>" ; 
-*/
+ 
+$databaseHandler_1 = new DatabaseHandler($username, $password);
+$databaseHandler_1->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name1");
+$databaseHandler_2 = new DatabaseHandler($username, $password);
+$databaseHandler_2->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name2");
+$databaseHandler_3 = new DatabaseHandler($username, $password);
+$databaseHandler_3->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name3");
+$databaseHandler_4 = new DatabaseHandler($username, $password);
+$databaseHandler_4->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name4");
+$databaseHandler_5 = new DatabaseHandler($username, $password);
+$databaseHandler_5->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name5");
+$databaseHandler_6 = new DatabaseHandler($username, $password);
+$databaseHandler_6->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_title_src1");
+ 
+ 
+
 ?>
+ 
 
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,9 +53,9 @@ echo "<br/>" ;
 
 /* Add a gray background color with some padding */
 body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
+ 
+  
+ 
 }
 
 /* Header/Blog Title */
@@ -118,55 +117,62 @@ body {
   }
 }
 </style>
-<style>
-    h2 input,h5 input,p input,textarea{
-        border:1px solid rgba(0,0,0,0) ; 
-        width:100%;
-        border-bottom:7px solid rgba(0,0,0,0.1);
-        
-    }
-.fakeimg{
-    background-image: url("https://techcafe.fr/wp-content/uploads/sites/4/2022/09/tech-cafe-287-panoramic.jpg");
-}
-
-
-.header_btn{
-  margin-bottom:15px; 
-}
-.header_btn:hover{
- 
-  cursor: pointer;
-  color:white ; 
-}
-</style>
 </head>
 <body>
+<style>
+      .div_img{
+            width:100%;
+            background-color:black ; 
+            text-align: center;
+           
+      }
+      .div_img img{
+            width:50%;
+      }
+</style>
 
-<div class="header">
-  <h2> <input placeholder="Blog Name" type="text"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_1" ?>"></h2>
+
+
+ 
+<?php 
+
+
+
+ for($a = 0 ; $a <count($databaseHandler_0->tableList_info) ; $a ++) {
+  ?>
+  <div class="header">
+  <h2> <input type="text" placeholder="Blog Name"    value="<?php echo $databaseHandler_1->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_1" ?>"></h2>
+
 </div>
 
-<div class="row">
+<div class="row header_modif">
   <div class="leftcolumn">
-    <div class="card">
-      <h2> <input placeholder="TITLE HEADING" type="text"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)"    id="<?php echo $liste_projet_admin_add_projet_value."_2" ?>"></h2>
-      <h5><input  placeholder="Title description, Dec 7, 2017" type="text"    title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_3" ?>"></h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p> <input placeholder="Some text.." type="text"    title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_4" ?>"></p>
-      <p>      <textarea     style="height:200px"  title="<?php echo $liste_projet_admin_add_projet_value ?>"  onkeyup="add_projet_1_key_up(this)" id="<?php echo $liste_projet_admin_add_projet_value."_5" ?>">
-      </textarea>  
-    </div>
+     <div class="card">
+     <h2> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_2->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_2" ?>"></h2>
 
-    <div class="card" id="add_projet_1_child">
-      <h2>TITLE HEADING ok</h2>
+     <h5> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_3->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_3" ?>"></h5>
+
+     <div class="div_img cursor_pointer" onclick="change_img(this)" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>">
+        <img src="<?php echo $img ?>" alt="" srcset="">
+      </div>
+      <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_4->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_4" ?>"></p>
+      <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_5->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_5" ?>"></p>
+
+    </div>
+  <?php
+}
+
+
+?>
+
+ 
+  
+    <div class="card">
+      <h2>TITLE HEADING</h2>
       <h5>Title description, Sep 2, 2017</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <div onclick="add_projet_1_plus(this)">
-    <img width="50" height="50" src="https://img.icons8.com/ios/50/add--v1.png" alt="add--v1" class="cursor_pointer" />
-    add elment
     </div>
   </div>
   <div class="rightcolumn">
@@ -191,6 +197,20 @@ body {
 <div class="footer">
   <h2>Footer</h2>
 </div>
+ 
 
+<style>
+  input{
+    width:100% ; 
+    border:1px solid rgba(0,0,0,0) ; 
+    border-bottom:5px dotted rgba(0,0,0,0.1) ; 
+
+  }
+  .header_modif{
+    
+    width:100%; 
+    margin:auto ; 
+  }
+</style>
 </body>
 </html>

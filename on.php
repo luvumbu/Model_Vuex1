@@ -1,6 +1,11 @@
 <?php 
-echo $_SESSION["information_user_name_1"] ; 
+//echo $_SESSION["information_user_name_1"] ; 
 require_once 'style1.php';
+
+
+ 
+
+
 ?>
 
 <script>
@@ -24,7 +29,7 @@ require_once 'style1.php';
 
 function myGreeting() {
   
- 
+
     Ajax("01", "select/add_projet_"+add_projet.value+".php");
 
 
@@ -39,7 +44,7 @@ function myGreeting2() {
  
 
 
-  document.getElementById("add_projet_1_child").innerHTML="" ; 
+  //document.getElementById("add_projet_1_child").innerHTML="" ; 
  
   // code block
 
@@ -55,6 +60,7 @@ function myGreeting2() {
         const liste_projet_admin_name3 = document.getElementById(_this.title+'_3').value ; 
         const liste_projet_admin_name4 = document.getElementById(_this.title+'_4').value ; 
         const liste_projet_admin_name5 = document.getElementById(_this.title+'_5').value ; 
+        
  
 
 
@@ -132,6 +138,58 @@ function myGreeting() {
 }
 
     }
+
+    function change_img(_this){
+console.log(_this.title) ; 
+
+
+
+
+
+
+
+
+
+
+
+
+//$_SESSION["add_picturex"]
+
+
+
+
+
+var ok = new Information("change_img/name.php"); // création de la classe 
+
+ok.add("liste_projet_admin_id_sha1", _this.title); // ajout de l'information pour lenvoi 
+
+ 
+ 
+
+console.log(ok.info()); // demande l'information dans le tableau
+ok.push(); // envoie l'information au code pkp 
+
+
+
+window.location.href = "change_img/index.php";
+    }
+
+
+
+ 
+
+
+
+
+
+  const xx = setTimeout(x, 320);
+
+function x() {
+ 
+  Ajax("01", "select/add_projet_1.php");
+
+}
+
 </script>
 
 
