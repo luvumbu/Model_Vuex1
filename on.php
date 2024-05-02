@@ -140,7 +140,13 @@ function myGreeting() {
     }
 
     function change_img(_this){
-console.log(_this.title) ; 
+
+
+
+      console.log(_this.title) ; 
+
+    
+ 
 
 
 
@@ -161,7 +167,7 @@ console.log(_this.title) ;
 
 var ok = new Information("change_img/name.php"); // création de la classe 
 
-ok.add("liste_projet_admin_id_sha1", _this.title); // ajout de l'information pour lenvoi 
+ok.add("liste_projet_admin_src1", _this.title); // ajout de l'information pour lenvoi 
 
  
  
@@ -171,7 +177,10 @@ ok.push(); // envoie l'information au code pkp
 
 
 
-window.location.href = "change_img/index.php";
+ window.location.href = "change_img/index.php";
+
+
+ 
     }
 
 

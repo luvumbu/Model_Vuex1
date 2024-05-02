@@ -18,11 +18,7 @@ $img ="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/g/h/y/medium-g
 
 
 $databaseHandler_0 = new DatabaseHandler($username, $password);
-
 $databaseHandler_0->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1 ." ","liste_projet_admin_id_sha1");
-
-
- 
 $databaseHandler_1 = new DatabaseHandler($username, $password);
 $databaseHandler_1->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name1");
 $databaseHandler_2 = new DatabaseHandler($username, $password);
@@ -34,8 +30,30 @@ $databaseHandler_4->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `
 $databaseHandler_5 = new DatabaseHandler($username, $password);
 $databaseHandler_5->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name5");
 $databaseHandler_6 = new DatabaseHandler($username, $password);
-$databaseHandler_6->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_title_src1");
+$databaseHandler_6->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_src3");
+
+
+
+
+
+$databaseHandler_0_child = new DatabaseHandler($username, $password);
+$databaseHandler_0_child->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`=".$liste_projet_admin_id_sha1 ." ","liste_projet_admin_id_sha1");
+$databaseHandler_1_child = new DatabaseHandler($username, $password);
+$databaseHandler_1_child->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name1");
+$databaseHandler_2_child = new DatabaseHandler($username, $password);
+$databaseHandler_2_child->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name2");
+$databaseHandler_3_child = new DatabaseHandler($username, $password);
+$databaseHandler_3_child->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name3");
+$databaseHandler_4_child = new DatabaseHandler($username, $password);
+$databaseHandler_4_child->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name4");
+$databaseHandler_5_child = new DatabaseHandler($username, $password);
+$databaseHandler_5_child->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_name5");
+$databaseHandler_6_child = new DatabaseHandler($username, $password);
+$databaseHandler_6_child->getDataFromTable("SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_sha1_parent`=".$liste_projet_admin_id_sha1." ","liste_projet_admin_src3");
  
+ 
+
+
  
 
 ?>
@@ -153,8 +171,19 @@ body {
      <h5> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_3->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_3" ?>"></h5>
 
      <div class="div_img cursor_pointer" onclick="change_img(this)" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>">
-        <img src="<?php echo $img ?>" alt="" srcset="">
+        <img src="<?php echo "change_img/".$databaseHandler_6->tableList_info[$a] ?>" alt="" srcset="">
       </div>
+
+      
+ 
+ 
+      
+
+
+<p>
+  <?php echo $databaseHandler_6->tableList_info[$a] ?> 
+</p>
+      <p><?php echo $databaseHandler_6->tableList_info[$a] ?></p>
       <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_4->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_4" ?>"></p>
       <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_5->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_5" ?>"></p>
 
@@ -163,17 +192,36 @@ body {
 }
 
 
+
+
+for($a = 0 ; $a <count($databaseHandler_0_child->tableList_info); $a ++) {
+  ?>
+  <a style="display: none;"> <input type="text" placeholder="Blog Name"    value="<?php echo $databaseHandler_1_child->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0_child->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0_child->tableList_info[$a]."_1" ?>"></a>
+
+<div class="card">
+<h2> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_2_child->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0_child->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0_child->tableList_info[$a]."_2" ?>"></h2>
+
+<h5> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_3_child->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0_child->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0_child->tableList_info[$a]."_3" ?>"></h5>
+
+
+<div class="div_img cursor_pointer" onclick="change_img(this)" title="<?php echo $databaseHandler_0_child->tableList_info[$a] ?>">
+        <img src="<?php echo "change_img/".$databaseHandler_6_child->tableList_info[$a] ?>" alt="" srcset="">
+      </div>
+      <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_4_child->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0_child->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0_child->tableList_info[$a]."_4" ?>"></p>
+      <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_5_child->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0_child->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0_child->tableList_info[$a]."_5" ?>"></p>
+
+    </div>
+<?php 
+}
+
+
+
+
+
 ?>
 
  
-  
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
+ 
   </div>
   <div class="rightcolumn">
     <div class="card">
