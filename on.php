@@ -38,10 +38,13 @@ function myGreeting() {
     }
 
     function add_projet2(){
-
-      Ajax("01", "add/add_projet_value2.php");
+ 
       
-      
+      var ok = new Information("add/add_projet_value2.php"); // création de la classe 
+ 
+ 
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
 
  
 const myTimeout2 = setTimeout(myGreeting2, 100);
