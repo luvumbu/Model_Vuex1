@@ -10,6 +10,8 @@ require_once 'style1.php';
 
 <script>
     function add_projet(){
+
+       
         var add_projet  = document.getElementById("add_projet"); 
 
   
@@ -25,33 +27,39 @@ require_once 'style1.php';
 
   const myTimeout = setTimeout(myGreeting, 250);
 
-  const myTimeout2 = setTimeout(myGreeting2, 500);
+ 
 
 function myGreeting() {
-  
-
-    Ajax("01", "select/add_projet_"+add_projet.value+".php");
-
-
- 
-    // code block
- 
+    Ajax("01", "select/add_projet_"+add_projet.value+".php"); 
 }
 
-function myGreeting2() {
-  
- 
- 
 
-
-  //document.getElementById("add_projet_1_child").innerHTML="" ; 
- 
-  // code block
-
-}
 
     }
 
+    function add_projet2(){
+
+      Ajax("01", "add/add_projet_value2.php");
+      
+      
+
+ 
+const myTimeout2 = setTimeout(myGreeting2, 100);
+ 
+
+ 
+
+function myGreeting2() {
+          Ajax("01", "select/add_projet_1.php");
+}
+
+     
+
+
+    }
+
+
+   
 
     function add_projet_1_key_up(_this){
         
@@ -191,15 +199,25 @@ ok.push(); // envoie l'information au code pkp
 
 
 
-  const xx = setTimeout(x, 320);
+
+
+</script>
+<?php 
+
+
+if(isset($_SESSION["liste_projet_admin_src1"])){
+  ?>
+<script>
+    const xx = setTimeout(x, 320);
 
 function x() {
  
   Ajax("01", "select/add_projet_1.php");
 
 }
-
 </script>
 
+<?php 
+}
 
  

@@ -177,13 +177,7 @@ body {
       
  
  
-      
-
-
-<p>
-  <?php echo $databaseHandler_6->tableList_info[$a] ?> 
-</p>
-      <p><?php echo $databaseHandler_6->tableList_info[$a] ?></p>
+ 
       <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_4->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_4" ?>"></p>
       <p> <input type="text" placeholder="Blog Name"   value="<?php echo $databaseHandler_5->tableList_info[$a] ?>" title="<?php echo $databaseHandler_0->tableList_info[$a] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[$a]."_5" ?>"></p>
 
@@ -241,6 +235,9 @@ for($a = 0 ; $a <count($databaseHandler_0_child->tableList_info); $a ++) {
     </div>
   </div>
 </div>
+
+<img onclick="add_projet2()" width="100" height="100" src="https://img.icons8.com/ios/100/plus--v1.png" alt="plus--v1"class="cursor_pointer" />
+ajouter un element 
 
 <div class="footer">
   <h2>Footer</h2>

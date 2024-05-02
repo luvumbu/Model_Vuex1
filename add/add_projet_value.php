@@ -6,6 +6,8 @@ require_once '../config.php';
 require_once '../DatabaseHandler.php';
  $information_user_id_sha1 = $_SESSION["information_user_id_sha1"] ; 
  
+
+ 
 $databaseHandler = new DatabaseHandler($username, $password);
  
 $liste_projet_admin_add_projet_value = $_POST["add_projet_value"] ; 
@@ -17,8 +19,6 @@ $_SESSION["liste_projet_admin_id_sha1"] = $time ;
  
 $_SESSION["liste_projet_admin_add_projet_value"] = $liste_projet_admin_add_projet_value ;
 
-if(isset($_SESSION["name2"])){
-    unset($_SESSION["name2"]);
-}
+ 
 
 ?>
