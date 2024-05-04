@@ -79,15 +79,6 @@ body {
 <div class="header header_btn">
   <h2>Blog Name</h2>
 </div>
-<div class="header header_btn">
-  <h2>Blog Name</h2>
-</div>
-<div class="header header_btn">
-  <h2>Blog Name</h2>
-</div>
-<div class="header header_btn">
-  <h2>Blog Name</h2>
-</div>
 
 <div class="row">
   <div class="leftcolumn">

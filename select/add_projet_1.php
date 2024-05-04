@@ -53,7 +53,6 @@ $databaseHandler_6_child->getDataFromTable("SELECT * FROM `liste_projet_admin` W
  
  
 
-
  
 
 ?>
