@@ -15,7 +15,7 @@
   <div class="container-fluid mt-3 text-center">
 
     <div class="row">
-      <div id="4" class="col p-3">
+  <!--    <div id="4" class="col p-3">
         <a href="index.php">
           <img width="50" height="50" src="src/img/home--v1.png" alt="home--v1" />
         </a>
@@ -26,14 +26,14 @@
         <img width="50" class="cursor_pointer" height="50" src="src/img/new-job.png" alt="new-job"/>
       
         <P>MES PROJET</P>
-      </div>
+      </div> -->
       <div onclick="action_row(this)" id="2" class="col p-3">
       <img class="cursor_pointer" width="50" height="50" src="src/img/plus--v1.png" alt="plus--v1" />
       <P>AJOUTER UN PROJET</P>
 
     </div>
 
-
+<!--
       <div onclick="action_row(this)" id="3" class="col p-3">
         <img width="50" height="50" src="src/img/delete--v1.png" alt="delete--v1" />
         <P>VOIR PROJET EFFACE</P>
@@ -42,7 +42,7 @@
       <img width="50" height="50" src="src/img/settings--v1.png" alt="settings--v1" />
       <P>PARAMETRES</P>
     </div>
-  
+-->
     <div id="4" class="col p-3">
         <a href="session_destroy.php">
           <img width="50" height="50" src="src/img/disconnected.png" alt="disconnected" />
