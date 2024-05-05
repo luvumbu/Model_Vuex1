@@ -154,52 +154,29 @@ function myGreeting() {
 
     function change_img(_this){
 
-
-
-      console.log(_this.title) ; 
-
-    
  
-
-
-
-
-
-
-
-
-
-
-
-
 //$_SESSION["add_picturex"]
-
-
-
-
-
 var ok = new Information("change_img/name.php"); // création de la classe 
-
 ok.add("liste_projet_admin_src1", _this.title); // ajout de l'information pour lenvoi 
 
- 
- 
+ok.add("change_img_numer", _this.className); // ajout de l'information pour lenvoi 
 
 console.log(ok.info()); // demande l'information dans le tableau
 ok.push(); // envoie l'information au code pkp 
+window.location.href = "change_img/index.php";
+ }
 
-
-
- window.location.href = "change_img/index.php";
-
-
- 
-    }
 
 
 
  
 
+
+ 
+
+
+
+ 
 
 
 
@@ -223,6 +200,9 @@ function x() {
 </script>
 
 <?php 
+}
+else {
+  require_once "blog.php" ; 
 }
 
  

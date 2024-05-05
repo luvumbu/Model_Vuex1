@@ -7,7 +7,7 @@ $information_user_id_sha1 =  $_SESSION["information_user_id_sha1"]  ;
  
  
 $databaseHandler_0 = new DatabaseHandler($username, $password);
-$databaseHandler_0->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_id");
+$databaseHandler_0->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_id_sha1_user");
  
 
 $databaseHandler_1 = new DatabaseHandler($username, $password);
@@ -31,9 +31,11 @@ $databaseHandler_5->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `
  
 
 $databaseHandler_6 = new DatabaseHandler($username, $password);
-$databaseHandler_6->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_title_src3");
+$databaseHandler_6->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_src3");
  
 
+$img ="https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/g/h/y/medium-god-budhha-art-posters-gautam-buddha-hd-god-photo-original-imagp4btfeburhun.jpeg?q=90&crop=false";
+ 
 
 
  
@@ -121,21 +123,45 @@ body {
 <body>
 
 <div class="header header_btn">
-  <h2><input type="text" value="<?php echo $databaseHandler_1->tableList_info[0] ?>"></h2>
+  <h2><input type="text"  value="<?php echo $databaseHandler_1->tableList_info[0] ?>" title="<?php echo $databaseHandler_0->tableList_info[0] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[0]."_1" ?>"></h2>
 </div>
 
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2><input type="text" value="<?php echo $databaseHandler_2->tableList_info[0] ?>"></h2>
-      <h5><input type="text" value="<?php echo $databaseHandler_3->tableList_info[0] ?>"></h5>
-      <div class="fakeimg" style="height:200px;">
-    
-    </div>
-      <p> <input type="text" value="<?php echo $databaseHandler_4->tableList_info[0] ?>"></p>
+      <h2><input type="text"  value="<?php echo $databaseHandler_2->tableList_info[0] ?>" title="<?php echo $databaseHandler_0->tableList_info[0] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[0]."_2" ?>"></h2>
+      <h5><input type="text"  value="<?php echo $databaseHandler_3->tableList_info[0] ?>" title="<?php echo $databaseHandler_0->tableList_info[0] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[0]."_3" ?>"></h5>
+ 
+
+      <?php
+if($databaseHandler_6->tableList_info[0]!=""){
+?>
+
+<div class="off cursor_pointer div_img" onclick="change_img(this)" title="<?php echo $databaseHandler_0->tableList_info[0] ?>">
+        <img src="<?php echo "change_img/".$databaseHandler_6->tableList_info[0] ?>" alt="" srcset="">
+      </div>
+<?php
+}
+else {
+  ?>
+
+<div class="off cursor_pointer div_img" onclick="change_img(this)" title="<?php echo $databaseHandler_0->tableList_info[0] ?>">
+        <img src="<?php  echo $img ?>" alt="" srcset="">
+      </div>
+<?php
+}
+
+?>
+
+
+
+
+
+
+      <p> <input type="text"  value="<?php echo $databaseHandler_4->tableList_info[0] ?>" title="<?php echo $databaseHandler_0->tableList_info[0] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[0]."_4" ?>"></p>
       <p>
         
-      <textarea name="" id="" style="height:200px">
+      <textarea type="text"  value="<?php echo $databaseHandler_4->tableList_info[0] ?>" title="<?php echo $databaseHandler_0->tableList_info[0] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[0]."_5" ?>" style="height:200px">
 
       <?php echo $databaseHandler_5->tableList_info[0] ?>
       </textarea>
@@ -188,5 +214,9 @@ body {
   background-color: black;
   cursor: pointer;
   color:white ; 
+}
+.div_img img{
+  width:100% ; 
+  margin: auto;
 }
 </style>
