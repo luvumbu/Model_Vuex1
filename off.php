@@ -35,8 +35,10 @@
       <br />
       <input type="button" value="Connexion" title="Connexion" id="btn_connexion" class="index_class_4 cursor_pointer"
         onclick="information_user_btn(this)">
-      <input type="button" value="Inscription" title="Inscription" id="btn_inscription"
+   <!--   <input type="button" value="Inscription" title="Inscription" id="btn_inscription"
         class="index_class_5 cursor_pointer" onclick="information_user_btn(this)">
+
+-->
 <a href="">Mot de passe oublié</a>
 
     </div>
@@ -233,7 +235,7 @@ const myTimeout = setTimeout(myGreeting, 250);
 function myGreeting() {
   Ajax("information_user_btn_info","info/information_user_btn_info.php");
   document.getElementById("information_user_btn_info").className="alert alert-primary" ; 
-location.reload();
+ location.reload();
 
 }
 

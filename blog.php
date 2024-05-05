@@ -1,3 +1,47 @@
+<?php 
+ 
+
+
+
+$information_user_id_sha1 =  $_SESSION["information_user_id_sha1"]  ;
+ 
+ 
+$databaseHandler_0 = new DatabaseHandler($username, $password);
+$databaseHandler_0->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_id");
+ 
+
+$databaseHandler_1 = new DatabaseHandler($username, $password);
+$databaseHandler_1->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_name1");
+ 
+
+$databaseHandler_2 = new DatabaseHandler($username, $password);
+$databaseHandler_2->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_name2");
+ 
+
+$databaseHandler_3 = new DatabaseHandler($username, $password);
+$databaseHandler_3->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_name3");
+ 
+
+$databaseHandler_4 = new DatabaseHandler($username, $password);
+$databaseHandler_4->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_name4");
+ 
+
+$databaseHandler_5 = new DatabaseHandler($username, $password);
+$databaseHandler_5->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_name5");
+ 
+
+$databaseHandler_6 = new DatabaseHandler($username, $password);
+$databaseHandler_6->getDataFromTable('SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_add_projet_value`="0"   AND `liste_projet_admin_id_sha1_user` ="'.$information_user_id_sha1.'" ',"liste_projet_admin_title_src3");
+ 
+
+
+
+ 
+ 
+ 
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,24 +121,23 @@ body {
 <body>
 
 <div class="header header_btn">
-  <h2>Blog Name</h2>
+  <h2><input type="text" value="<?php echo $databaseHandler_1->tableList_info[0] ?>"></h2>
 </div>
 
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2><input type="text" value="TITLE HEADING"></h2>
-      <h5><input type="text" value="Title description, Dec 7, 2017"></h5>
+      <h2><input type="text" value="<?php echo $databaseHandler_2->tableList_info[0] ?>"></h2>
+      <h5><input type="text" value="<?php echo $databaseHandler_3->tableList_info[0] ?>"></h5>
       <div class="fakeimg" style="height:200px;">
     
     </div>
-      <p><input type="text" value="Some text.."></p>
+      <p> <input type="text" value="<?php echo $databaseHandler_4->tableList_info[0] ?>"></p>
       <p>
         
       <textarea name="" id="" style="height:200px">
 
-      Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
+      <?php echo $databaseHandler_5->tableList_info[0] ?>
       </textarea>
       
     </div>

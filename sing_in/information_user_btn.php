@@ -7,6 +7,8 @@ $information_user_password = sha1($_POST["information_user_password"]);
 $_SESSION["information_user_btn_info"] = "" ; 
 require_once '../DatabaseHandler.php';
 require_once '../config.php';
+
+$_SESSION["information_user_btn_info"]  ="Nouvelle inscription " ;
 $databaseHandler = new DatabaseHandler($username, $password);
 $databaseHandler->getDataFromTable('SELECT * FROM `information_user` WHERE `information_user_login` ="'.$information_user_login.'"',"information_user_id_sha1");
 $databaseHandler2 = new DatabaseHandler($username, $password);
