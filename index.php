@@ -15,34 +15,18 @@ $form_log_dbd        ="view/off/form_log_dbd.php" ;
 $form_log_dbd_user_off="view/off/form_log_dbd_user_off.php";
 $fichier_connexion = "class/config.php" ;
 require_once $path_DatabaseHandler; 
-
 if (file_exists($fichier_connexion)) {
 $databaseHandler = new DatabaseHandler($dbname, $username); 
-if($databaseHandler->verif) {
-
-   
+if($databaseHandler->verif) {   
     unlink($fichier_connexion) ;     
    echo '<meta http-equiv="refresh" content="1;URL=">' ;
-}
-else{
-     
-}
-    require_once $form_log_dbd_user_off;   
+}    require_once $form_log_dbd_user_off;   
 } 
-else {
-   
+else {   
     require_once $form_log_dbd; 
-  
-
-
-}
-
- 
- 
- 
+} 
 ?>
 <script src="exe_off/js/const_all.js"></script>
 <script src="exe_off/js/class.js"></script>
-
 </body>
 </html>
