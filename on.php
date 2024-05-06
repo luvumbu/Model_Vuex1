@@ -189,7 +189,26 @@ function myGreeting() {
 
  
 
+function fakeimg_mes_projet(_this){
 
+
+
+  var ok = new Information("info/fakeimg_mes_projet.php"); // création de la classe 
+ok.add("liste_projet_admin_id_sha1", _this.title); // ajout de l'information pour lenvoi 
+
+ 
+
+console.log(ok.info()); // demande l'information dans le tableau
+ok.push(); // envoie l'information au code pkp 
+
+
+
+const myTimeout = setTimeout(myGreeting, 240);
+
+function myGreeting() {
+  location.reload(); 
+}
+}
 
 
 
@@ -224,3 +243,35 @@ else{
 
 
  
+<style>
+    h2 input,h5 input,p input,textarea{
+        border:1px solid rgba(0,0,0,0) ; 
+        width:100%;
+        border-bottom:1px solid rgba(0,0,0,0.1);
+    }
+.fakeimg{
+    background-image: url("https://techcafe.fr/wp-content/uploads/sites/4/2022/09/tech-cafe-287-panoramic.jpg");
+    color:white;
+  cursor: pointer;
+
+    text-align: center;
+    padding-top:90px;
+    padding-bottom: 90px;
+}
+
+
+.header_btn{
+  margin-bottom:15px; 
+}
+.header_btn:hover{
+  background-color: black;
+  cursor: pointer;
+  color:white ; 
+
+}
+.div_img img{
+  width:100% ; 
+  margin: auto;
+ 
+}
+</style>

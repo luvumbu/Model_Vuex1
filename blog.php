@@ -169,23 +169,11 @@ else {
     </div>
  
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
+<?php 
+include("apropos.php") ; 
+include("mes_projet.php") ; 
+
+?>
 </div>
 
 <div class="footer">
@@ -196,27 +184,3 @@ else {
 </html>
 
 
-<style>
-    h2 input,h5 input,p input,textarea{
-        border:1px solid rgba(0,0,0,0) ; 
-        width:100%;
-        border-bottom:1px solid rgba(0,0,0,0.1);
-    }
-.fakeimg{
-    background-image: url("https://techcafe.fr/wp-content/uploads/sites/4/2022/09/tech-cafe-287-panoramic.jpg");
-}
-
-
-.header_btn{
-  margin-bottom:15px; 
-}
-.header_btn:hover{
-  background-color: black;
-  cursor: pointer;
-  color:white ; 
-}
-.div_img img{
-  width:100% ; 
-  margin: auto;
-}
-</style>

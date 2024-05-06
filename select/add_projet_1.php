@@ -248,23 +248,11 @@ for($a = 0 ; $a <count($databaseHandler_0_child->tableList_info); $a ++) {
  
  
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
+  <?php 
+include("../apropos.php") ; 
+include("../mes_projet.php") ; 
+
+?>
 </div>
 
 <img onclick="add_projet2()" width="100" height="100" src="https://img.icons8.com/ios/100/plus--v1.png" alt="plus--v1"class="cursor_pointer" />
