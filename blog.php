@@ -121,7 +121,7 @@ body {
 </style>
 </head>
 <body>
-
+<h1 class="text-center" style="margin-bottom:200px;margin-top:200px">PAGE PRINCIPAL </h1>
 <div class="header header_btn">
   <h2><input type="text"  value="<?php echo $databaseHandler_1->tableList_info[0] ?>" title="<?php echo $databaseHandler_0->tableList_info[0] ?>"  onkeyup="add_projet_1_key_up2(this)" id="<?php echo $databaseHandler_0->tableList_info[0]."_1" ?>"></h2>
 </div>

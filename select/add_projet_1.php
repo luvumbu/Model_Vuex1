@@ -270,6 +270,9 @@ for($a = 0 ; $a <count($databaseHandler_0_child->tableList_info); $a ++) {
 <img onclick="add_projet2()" width="100" height="100" src="https://img.icons8.com/ios/100/plus--v1.png" alt="plus--v1"class="cursor_pointer" />
 ajouter un element 
 
+
+<h1 class="terminer" onclick="terminer()">TERMINER</h1>
+
 <div class="footer">
   <h2>Footer</h2>
 </div>
@@ -287,6 +290,20 @@ ajouter un element
     width:100%; 
     margin:auto ; 
   }
+  .blog{
+    display: none;
+  }
+  .terminer{
+    background-color: rgba(250,0,0,0.8);
+    width:300px; 
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 15px;
+    cursor: pointer;
+  }
 </style>
+
+
+
 </body>
 </html>

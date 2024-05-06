@@ -171,7 +171,18 @@ window.location.href = "change_img/index.php";
 
  
 
+function terminer(){
 
+  Ajax("add_projet_1_child", "terminer.php");
+
+
+
+  const myTimeout = setTimeout(myGreeting, 250);
+
+function myGreeting() {
+  location.reload();
+}
+}
  
 
 
@@ -186,8 +197,9 @@ window.location.href = "change_img/index.php";
 </script>
 <?php 
 
-
-if(isset($_SESSION["liste_projet_admin_src1"])){
+ 
+ 
+if(isset($_SESSION["liste_projet_admin_id_sha1"])){
   ?>
 <script>
     const xx = setTimeout(x, 320);
@@ -201,8 +213,14 @@ function x() {
 
 <?php 
 }
-else {
+else{
+  
   require_once "blog.php" ; 
 }
+ 
+
+
+  ?>
+
 
  
