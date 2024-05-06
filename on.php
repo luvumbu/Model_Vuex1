@@ -203,7 +203,7 @@ ok.push(); // envoie l'information au code pkp
 
 
 
-const myTimeout = setTimeout(myGreeting, 240);
+const myTimeout = setTimeout(myGreeting, 50);
 
 function myGreeting() {
   location.reload(); 
@@ -273,5 +273,20 @@ else{
   width:100% ; 
   margin: auto;
  
+}
+.grande_img img{
+  width: 100%;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.grande_img {
+  border-bottom:1px solid rgba(0,50,0,0.5) ;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.grande_img h5 {
+  margin-top:60px;
+  margin-bottom:60px;
 }
 </style>
