@@ -40,7 +40,7 @@ class DatabaseHandler {
                     array_push($this->tableList, $row[0]);
                 }
             } else {
-                echo "Aucune table trouvee dans la base de donnees '$database'.";
+              
                 $this->tableList = false ; 
             }
 

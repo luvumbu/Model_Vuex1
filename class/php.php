@@ -27,7 +27,7 @@ if ($databaseHandler->existe_table($username)) {
     if ($result !== false) {
 
 
-require_once 'creat_table.php' ; 
+require_once 'config.php' ; 
 
 
 
