@@ -24,22 +24,11 @@ else {
  
 $username=  $_POST["information_user_login"]; 
 $password=  $_POST["information_user_password"]; ; 
-$username =$_POST["information_user_login"];
+$dbname =   $_POST["information_user_login"];
 
- $databaseHandler = new DatabaseHandler($information_user_login,$information_user_password); 
+
  
-   
-$databaseHandler->set_column_names("id_x");
-$databaseHandler->set_column_names("nom");
-$databaseHandler->set_column_names("prenom");
-$databaseHandler->set_column_names("email");
-$databaseHandler->set_column_names("date_inscription");
-$databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
-$databaseHandler->set_column_types("VARCHAR(30) NOT NULL");
-$databaseHandler->set_column_types("VARCHAR(30) NOT NULL");
-$databaseHandler->set_column_types("VARCHAR(50)");
-$databaseHandler->set_column_types("TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
-$databaseHandler->add_table("r8x");
+include("add_table.php");
 
 
 

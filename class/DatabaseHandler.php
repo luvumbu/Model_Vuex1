@@ -19,6 +19,56 @@ class DatabaseHandler {
         if ($this->connection->connect_error) {
             $this->verif = false;
         }
+        else {
+            // Create connection
+                $conn = new mysqli($this->servername, $this->username, $this->password);
+                // Check connection
+                if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                }
+
+                $name_bdd= $this->username ; 
+
+                // Create database
+                $sql = "CREATE DATABASE $name_bdd";
+                if ($conn->query($sql) === TRUE) {
+             
+                } else {
+           //     echo "Error creating database: " . $conn->error;
+                }
+
+                $conn->close();
+        }
+    }
+
+
+
+
+    function existance_table($table_a_verifier){
+        // Connexion à la base de données
+$connexion = new mysqli($this->servername, $this->username, $this->password,$this->username);
+
+// Vérification de la connexion
+if ($connexion->connect_error) {
+    die("Erreur de connexion à la base de données : " . $connexion->connect_error);
+}
+
+// Nom de la table à vérifier
+ 
+
+// Requête SQL pour vérifier l'existence de la table
+$sql = "SHOW TABLES LIKE '$table_a_verifier'";
+$resultat = $connexion->query($sql);
+
+// Vérification du résultat
+if ($resultat->num_rows > 0) {
+    return 1;
+} else {
+   return 0;
+}
+
+// Fermeture de la connexion
+$connexion->close();
     }
     function getTables($database) {
         if ($this->verif) {

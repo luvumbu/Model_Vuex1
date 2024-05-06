@@ -7,9 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
-
 </html>
+<link rel="stylesheet" href="view/on/form_log_dbd_user_on.css">
 <div class="index_class_1">
   <div>
     <p class="index_class_2">
@@ -25,11 +24,7 @@
   </div>
   <div class="index_class_3">
     <div>
-      <input type="text" class="color_btn_1" id="information_user_login" placeholder="Adresse e-mail ou numéro de tél.">
-      <a id="div_cross" class="display_none" onclick="information_user_btn(this)" title="cansel">
-        <img width="25" height="25" src="https://img.icons8.com/ios/25/delete-sign--v1.png" alt="delete-sign--v1"
-          style="position: relative;right:0;" />
-      </a>
+      <input type="text" class="color_btn_1" id="information_user_login" placeholder="Adresse e-mail ou numéro de tél."> 
       <input type="password" class="color_btn_1" id="information_user_password" placeholder="Mot de passe">
 
       <br />
@@ -56,198 +51,18 @@
  
  
  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<?php
+include("form_log_dbd_user_on_link.php") ; 
+?>
 
-
-<script>
-  
-
-
-  function change_url(){
-    var element = 0 ; 
-var result  = "" ; 
-const paragraph = window.location.href;
-for(var x = 0 ; x<window.location.href.length ; x++ ) {
-
-if(element>2){
-  break ; 
-}
-
-
-if(window.location.href[x]=="/"){
-element ++ ; 
-}
-else {
-if(element>1){
- 
-
-  result = result+window.location.href[x] ;
-}
-
-
-
-}
-
-}
-return result ; 
-  }
-
-
-  document.getElementById("titre_page1").innerHTML = change_url() ; 
-  document.getElementById("titre_page2").innerHTML = change_url() ; 
-
-  document.getElementById("title").innerHTML=change_url() ;
 
  
- 
-
-</script>
-
-<style>
-     
-  :root {
-    --color_1: black;
-    --black:black; 
-    /*--color_1: #1877f2;*/
-    --white: #ffffff;
-  }
-
-  .index_class_2 b {
-    color: var(--black);
-    font-size: 2.3em;
-  }
-
-  .display_none {
-    display: none;
-  }
-
-  .index_class_1 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: auto;
-    margin-top: 200px;
-
-  }
-
-  .index_class_1 div {
-    padding: 20px;
-  }
-
-  .index_class_3 {
-    position: relative;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 1px 4px 4px 3px rgba(0, 0, 0, 0.2);
-  }
-
-  .index_class_3 input {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
-    border-radius: 5px;
-    border: 1px solid #dddfe2;
-
-  }
-
-  .index_class_4 {
-    background-color: var(--black);
-    color: var(--white);
-  }
-
-  .index_class_4 {
-    padding: 5px;
-    text-align: center;
-    border-radius: 5px;
-  }
-
-  .index_class_5 {
-    background-color: #42b72a;
-    color: white;
-  }
-
-  .div_cross {}
-
-  .div_cross {
-
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    right: 0px;
-    top: 0;
-  }
-
-  .div_cross:hover {
-    background-color: grey;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-  .div_info{
-    width: 50%; 
-    margin: auto;
-  }
-  .none_1 { 
-    display: none;
-  }
-  input,textarea{
- 
-    color:white;
-    font-size:2em ;
-  }
-</style>
-</body>
  <script>
-  function information_user_btn(_this) {
-
-
-  const information_user_login = document.getElementById("information_user_login").value ; 
-  const information_user_password = document.getElementById("information_user_password").value ;   
- 
-
-
-switch(_this.id) {
-  case "btn_connexion":
-
- var ok = new Information("sing_in/information_user_btn.php"); // création de la classe 
-  ok.add("information_user_login", information_user_login); // ajout de l'information pour lenvoi 
-  ok.add("information_user_password", information_user_password); // ajout d'une deuxieme information denvoi  
-  console.log(ok.info()); // demande l'information dans le tableau
-  ok.push(); // envoie l'information au code pkp 
- 
-    break;
-  case "btn_inscription":
- 
-
-    // code block
-    break;
-  default:
-    // code block
-}
-
-
-const myTimeout = setTimeout(myGreeting, 250);
-
-function myGreeting() {
-  Ajax("information_user_btn_info","info/information_user_btn_info.php");
-  document.getElementById("information_user_btn_info").className="alert alert-primary" ; 
- location.reload();
-
-}
-
-
-
-
-    
+  function information_user_btn(_this){
+    console.log(_this.id) ; 
   }
  </script>
+</body>
+ 
 
-<style>
-  input{
-    color:black ; 
-  }
-</style>
+ 
