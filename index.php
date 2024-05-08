@@ -17,6 +17,8 @@ $fichier_connexion    ='class/config.php' ;
 $reload_page          ='<meta http-equiv="refresh" content="0;URL=">';
  
 require_once $path_DatabaseHandler; 
+require_once 'class/give_url.php'; 
+
 
 if (file_exists($fichier_connexion)) {
 require_once $fichier_connexion;   
@@ -38,6 +40,22 @@ if( $databaseHandler->existance_table("information_user")==0){
 else {   
     require_once $form_log_dbd; 
 } 
+
+ 
+
+  //echo give_url() ;
+  if(give_url()=="index.php"){
+    ?>
+        <script src="exe_off/js/const_all.js"></script>
+        <script src="exe_off/js/class.js"></script>
+    <?php
+  }
+  else {
+  require_once 'exe_off/js/const_all.php' ; 
+  require_once 'exe_off/js/class.php' ; 
+
+  }
+
 ?>
 
 <style>
@@ -46,7 +64,6 @@ else {
     padding: 0;
   }
 </style>
-<script src="exe_off/js/const_all.js"></script>
-<script src="exe_off/js/class.js"></script>
+
 </body>
 </html>
