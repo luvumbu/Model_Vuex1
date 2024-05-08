@@ -39,6 +39,13 @@ else {
     require_once $form_log_dbd; 
 } 
 ?>
+
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+  }
+</style>
 <script src="exe_off/js/const_all.js"></script>
 <script src="exe_off/js/class.js"></script>
 </body>

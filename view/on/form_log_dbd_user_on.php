@@ -8,6 +8,8 @@
 </head>
 <body>
 </html>
+
+
 <link rel="stylesheet" href="view/on/form_log_dbd_user_on.css">
 <div class="index_class_1">
   <div>
@@ -69,6 +71,10 @@ console.log(information_user_password.value) ;
 
   }
  </script>
+
+ <?php 
+      include("blog.php");
+ ?>
 </body>
  
 
