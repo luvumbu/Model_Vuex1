@@ -7,8 +7,7 @@
     <div class="form-group">
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" id="form_log_password"  value="root" placeholder="Enter password" name="pwd">
-    </div>
- 
+    </div> 
     <div type="submit" class="btn btn-default" onclick="form_log_onclick(this)">Submit</div>
   </form>
 </div>

@@ -9,9 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>  
-<?php
-
- 
+<?php 
 $path_DatabaseHandler ='class/DatabaseHandler.php' ;  
 $form_log_dbd         ='view/off/form_log_dbd.php' ;
 $form_log_dbd_user_on ='view/on/form_log_dbd_user_on.php';
@@ -25,14 +23,14 @@ require_once $fichier_connexion;
 $databaseHandler = new DatabaseHandler($username, $password); 
 if(!$databaseHandler->verif) {   
     unlink($fichier_connexion) ;     
-    echo   $reload_page  ;
+    echo $reload_page  ;
 } 
 
 if( $databaseHandler->existance_table("information_user")==0){
   // verification de l'existance de la table information_user
   // si la table n'existe pas on efface le fichier configuration et on recharge la page
   unlink($fichier_connexion) ;     
-  echo   $reload_page  ;
+  echo $reload_page  ;
 }
  require_once $form_log_dbd_user_on;   
 } 

@@ -24,7 +24,7 @@
   </div>
   <div class="index_class_3">
     <div>
-      <input type="text" class="color_btn_1" id="information_user_login" placeholder="Adresse e-mail ou numéro de tél."> 
+      <input type="text" class="color_btn_1" id="information_user_id_sha1" placeholder="Adresse e-mail ou numéro de tél."> 
       <input type="password" class="color_btn_1" id="information_user_password" placeholder="Mot de passe">
 
       <br />
@@ -58,8 +58,15 @@ include("form_log_dbd_user_on_link.php") ;
 
  
  <script>
+
+const information_user_id_sha1 = document.getElementById("information_user_id_sha1") ; 
+const information_user_password = document.getElementById("information_user_password") ; 
   function information_user_btn(_this){
     console.log(_this.id) ; 
+console.log(information_user_id_sha1.value) ; 
+console.log(information_user_password.value) ; 
+
+
   }
  </script>
 </body>
