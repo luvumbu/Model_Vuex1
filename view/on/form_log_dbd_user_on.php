@@ -10,7 +10,7 @@
 </html>
 
 
-<link rel="stylesheet" href="view/on/form_log_dbd_user_on.css">
+ 
 <div class="index_class_1">
   <div>
     <p class="index_class_2">
@@ -55,6 +55,10 @@
  
 <?php
 include("form_log_dbd_user_on_link.php") ; 
+
+
+
+require_once 'form_log_dbd_user_on_css.php' ; 
 ?>
 
 

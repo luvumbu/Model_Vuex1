@@ -1,4 +1,5 @@
-:root {
+<style>
+  :root {
     --color_1: black;
     --black:black; 
     /*--color_1: #1877f2;*/
@@ -92,3 +93,4 @@
   input{
     color:black ; 
   }
+</style>
