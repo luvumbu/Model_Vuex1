@@ -55,9 +55,6 @@
  
 <?php
 include("form_log_dbd_user_on_link.php") ; 
-
-
-
 require_once 'form_log_dbd_user_on_css.php' ; 
 ?>
 
