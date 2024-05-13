@@ -55,6 +55,7 @@ $databaseHandler00 = new DatabaseHandler($username ,$password);
 
 
 $databaseHandler00->action_sql("INSERT INTO `information_user` (information_user_id_sha1,information_user_login,information_user_password) VALUES ('$time','$username','$password_sha1')") ;
+$databaseHandler00->action_sql("INSERT INTO `liste_projet_admin` (liste_projet_admin_id_sha1_user,liste_projet_admin_id_sha1,liste_projet_admin_information_user_login) VALUES ('$time','$time','$username')") ;
 
 } 
  

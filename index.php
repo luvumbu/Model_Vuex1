@@ -78,6 +78,24 @@ else {
 ?>
 
 
+<script>
+    function destroy(){
+        Ajax("destroy","class/destroy.php");
+
+
+        const myTimeout2 = setTimeout(destroy, 50);
+
+
+function destroy() {
+
+  location.reload();
+
+
+
+}
+    }
+</script>
+
 <style>
   body{
     margin: 0;

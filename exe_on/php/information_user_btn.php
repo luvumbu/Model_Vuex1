@@ -26,6 +26,11 @@ if(count($databaseHandler01->tableList_info)==0){
     $_SESSION["information_user_password"] = $information_user_password ; 
     $_SESSION["information_user_id_sha1"] = $time;
 
+
+
+    
+    $databaseHandler00->action_sql("INSERT INTO `liste_projet_admin` (liste_projet_admin_information_user_login,liste_projet_admin_id_sha1,liste_projet_admin_id_sha1_user) VALUES ('$time','$time','$information_user_login')") ;
+
 }
 else {
     unset($_SESSION["information_user_id_sha1"]);
