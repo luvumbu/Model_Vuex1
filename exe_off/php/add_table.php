@@ -3,7 +3,7 @@
 $databaseHandler = new DatabaseHandler($dbname, $password);
  
 
-$databaseHandler->set_column_names("information_user");
+ 
 
 $databaseHandler->set_column_names("information_user_id");
 $databaseHandler->set_column_names("information_user_id_sha1");
@@ -42,7 +42,7 @@ $databaseHandler->set_column_names("information_user_reg_date");
 
 $databaseHandler->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
 
-$databaseHandler->set_column_types("TEXT  NOT NULL");
+ 
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL"); 
@@ -80,6 +80,8 @@ $databaseHandler->add_table("information_user");
 $databaseHandler2 = new DatabaseHandler($dbname, $password);
 
 $databaseHandler2->set_column_names("liste_projet_admin_id");
+$databaseHandler2->set_column_names("liste_projet_admin_ip");
+
 $databaseHandler2->set_column_names("liste_projet_admin_id_sha1");
 $databaseHandler2->set_column_names("liste_projet_admin_id_sha1_user");
 $databaseHandler2->set_column_names("liste_projet_admin_information_user_login");
@@ -143,6 +145,8 @@ $databaseHandler2->set_column_names("information_user_reg_date");
 $databaseHandler2->set_column_types("INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
+$databaseHandler2->set_column_types("TEXT  NOT NULL");
+
 
 $databaseHandler2->set_column_types("TEXT  NOT NULL");
 $databaseHandler2->set_column_types("TEXT  NOT NULL");

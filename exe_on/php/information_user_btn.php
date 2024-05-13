@@ -29,7 +29,7 @@ if(count($databaseHandler01->tableList_info)==0){
 
 
     
-    $databaseHandler00->action_sql("INSERT INTO `liste_projet_admin` (liste_projet_admin_information_user_login,liste_projet_admin_id_sha1,liste_projet_admin_id_sha1_user) VALUES ('$time','$time','$information_user_login')") ;
+    $databaseHandler00->action_sql("INSERT INTO `liste_projet_admin` (liste_projet_admin_id_sha1_user,liste_projet_admin_id_sha1,liste_projet_admin_information_user_login) VALUES ('$time','$time','$information_user_login')") ;
 
 }
 else {
