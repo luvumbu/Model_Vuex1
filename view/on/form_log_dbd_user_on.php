@@ -60,15 +60,18 @@
 require_once 'form_log_dbd_user_on_link.php' ; 
 require_once 'form_log_dbd_user_on_css.php' ; 
 ?>
-
+<div id="information_user_id_sha1_info"> </div>
 
  
  <script>
+
+  
 
 const information_user_login = document.getElementById("information_user_login") ; 
 const information_user_password = document.getElementById("information_user_password") ; 
 const form_1 = document.getElementById("form_1") ; 
 const info_err = document.getElementById("info_err") ; 
+
   function information_user_btn(_this){
 
   var ok = new Information("exe_on/php/information_user_btn.php"); // création de la classe 
@@ -79,8 +82,25 @@ const info_err = document.getElementById("info_err") ;
 
 
 
+  const myTimeout = setTimeout(information_user_id_sha1_info, 250);
+  const myTimeout2 = setTimeout(information_user_id_sha1_info, 320);
 
-  location.reload(); 
+
+function information_user_id_sha1_info() {
+  Ajax("information_user_id_sha1_info","view/on/information_user_id_sha1_info.php");
+
+
+
+}
+
+
+function information_user_id_sha1_info() {
+   location.reload() ; 
+
+
+
+}
+
    
 
   }
@@ -123,6 +143,7 @@ Ajax(nomId,document/source.txt);
  <?php 
 
 
+ 
  
 
 if( $_SERVER['SERVER_NAME']=="localhost"){

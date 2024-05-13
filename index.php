@@ -1,5 +1,8 @@
+<?php 
+session_start() ; 
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <title>Bokonzi</title>
   <meta charset="utf-8">
@@ -14,6 +17,8 @@
 $path_DatabaseHandler ='class/DatabaseHandler.php' ;  
 $form_log_dbd         ='view/off/form_log_dbd.php' ;
 $form_log_dbd_user_on ='view/on/form_log_dbd_user_on.php';
+$log ='view/on/log.php';
+
 $fichier_connexion    ='class/config.php' ;
 $reload_page          ='<meta http-equiv="refresh" content="0;URL=">';
  
@@ -35,7 +40,15 @@ if( $databaseHandler->existance_table("information_user")==0){
   unlink($fichier_connexion) ;     
   echo $reload_page  ;
 }
- require_once $form_log_dbd_user_on;   
+    
+     if(isset($_SESSION["information_user_id_sha1"])){
+     
+      require_once $log; 
+
+    } 
+    else{
+      require_once $form_log_dbd_user_on; 
+    } 
 } 
 
 else {   
@@ -56,6 +69,11 @@ else {
   require_once 'exe_off/js/class.php' ; 
 
   }
+
+
+ 
+
+
 
 ?>
 
