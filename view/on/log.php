@@ -3,7 +3,6 @@
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -11,12 +10,10 @@
     require_once "log_css.php";
     require_once "exe_on/php/select/log_data.php";
     /*
-
 exe_on/php/select/log_data:
     array_information_user_name_1
     array_information_user_img
     array_information_user_name_2
-
 */
     ?>
   </style>
@@ -31,29 +28,21 @@ exe_on/php/select/log_data:
   </div>
   <div class="row row_element">
     <div class="leftcolumn">
-      <?php
-          require_once "exe_on/php/select/data_parent.php";
-          require_once "exe_on/php/select/data_children.php";
-      ?>
+        <?php
+            require_once "exe_on/php/select/data_parent.php";
+            require_once "exe_on/php/select/data_children.php";
+        ?>
     </div>
     <div class="rightcolumn">
-      <?php
-        require_once "exe_on/php/select/data_user.php";
-        require_once "exe_on/php/select/data_popular.php";
-        require_once "exe_on/php/select/data_social_media.php";
-
-      ?>
-
-
+        <?php
+          require_once "exe_on/php/select/data_user.php";
+          require_once "exe_on/php/select/data_popular.php";
+          require_once "exe_on/php/select/data_social_media.php";
+        ?>
     </div>
   </div>
-
   <div class="footer">
     <h2>Footer</h2>
   </div>
-
-
-
 </body>
-
 </html>
