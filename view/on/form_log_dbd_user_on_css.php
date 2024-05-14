@@ -93,4 +93,13 @@
   input{
     color:black ; 
   }
-</style>
+ 
+  .form_forgot_password_class{
+    color:green ; 
+    background-color: red;
+    display: none;
+  }
+  .info_err{
+    color: red;
+  }
+ </style>
