@@ -83,6 +83,9 @@ else {
       
       const information_user_name_1 = document.getElementById("information_user_name_1");
       const information_user_name_2 = document.getElementById("information_user_name_2");
+
+
+
     function destroy(){
         Ajax("destroy","class/destroy.php");
 
@@ -118,6 +121,32 @@ function destroy() {
 
 
  
+}
+
+
+
+function liste_projet_admin_key_up(_this){
+ 
+
+  const liste_projet_admin_name1 = document.getElementById("liste_projet_admin_name1_"+_this.title);
+  const liste_projet_admin_name2 = document.getElementById("liste_projet_admin_name2_"+_this.title);
+
+
+   
+
+console.log(liste_projet_admin_name1.value) ; 
+console.log(liste_projet_admin_name2.value) ; 
+ 
+ 
+  var ok = new Information("exe_on/php/update/liste_projet_admin_key_up.php"); // création de la classe 
+  ok.add("liste_projet_admin_name1", liste_projet_admin_name1.value); // ajout de l'information pour lenvoi 
+  ok.add("liste_projet_admin_name2", liste_projet_admin_name2.value); // ajout d'une deuxieme information denvoi  
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+ 
+
+
+
 }
  
 </script>
