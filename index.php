@@ -79,6 +79,10 @@ else {
 
 
 <script>
+      
+      
+      const information_user_name_1 = document.getElementById("information_user_name_1");
+      const information_user_name_2 = document.getElementById("information_user_name_2");
     function destroy(){
         Ajax("destroy","class/destroy.php");
 
@@ -94,6 +98,28 @@ function destroy() {
 
 }
     }
+
+
+
+    function information_user_key_up() {
+ 
+ console.log(information_user_name_1.value) ; 
+ console.log(information_user_name_2.value) ; 
+
+
+  var ok = new Information("exe_on/php/update/information_user_key_up.php"); // création de la classe 
+  ok.add("information_user_name_1", information_user_name_1.value); // ajout de l'information pour lenvoi 
+  ok.add("information_user_name_2", information_user_name_2.value); // ajout d'une deuxieme information denvoi  
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+
+
+
+
+ 
+}
+ 
 </script>
 
 <style>
@@ -106,7 +132,7 @@ function destroy() {
   }
 </style>
 
-<script></script>
+
 
 </body>
 </html>

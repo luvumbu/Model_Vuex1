@@ -15,8 +15,14 @@ $array_information_user_img = $databaseHandler03->tableList_info[0] ;
 ?>
 <div class="card">
       <h2>
-        <input type="text" value="<?php echo  $array_information_user_name_1 ?>">       
+        <input onkeyup="information_user_key_up()" id="information_user_name_1" type="text" value="<?php echo  $array_information_user_name_1 ?>" placeholder="Votre nom" >       
       </h2>
       <div class="fakeimg" style="height:100px;"><input type="text" value="<?php echo $array_information_user_img ?>"></div>
-      <p><input type="text" value="<?php echo  $array_information_user_name_2 ?>"></p>
+      <p><input onkeyup="information_user_key_up()" id="information_user_name_2" type="text" value="<?php echo  $array_information_user_name_2 ?>"  placeholder="Déscription"></p>
 </div>
+
+<style>
+   input{
+    border:1px solid rgba(0,0,0,0) ; 
+  }
+</style>

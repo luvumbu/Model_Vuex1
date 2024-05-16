@@ -58,7 +58,6 @@
 <div id="information_user_id_sha1_info"> </div>
 
  
- 
 
  <?php 
     //  include("blog.php");
@@ -87,12 +86,10 @@ if( $_SERVER['SERVER_NAME']=="localhost"){
  
 <script>
   document.getElementById("titre_page1").innerHTML =document.getElementById("SERVER_NAME").innerHTML;
-  document.getElementById("titre_page2").innerHTML =document.getElementById("SERVER_NAME").innerHTML;
+  document.getElementById("titre_page2").innerHTML =document.getElementById("SERVER_NAME").innerHTML; 
 </script>
-
 <?php 
-
-require_once 'form_log_dbd_user_on_link.php' ; 
-require_once 'form_log_dbd_user_on_css.php' ; 
-require_once 'form_log_dbd_user_on_js.php' ; 
+    require_once 'form_log_dbd_user_on_link.php' ; 
+    require_once 'form_log_dbd_user_on_css.php' ; 
+    require_once 'form_log_dbd_user_on_js.php' ; 
 ?>

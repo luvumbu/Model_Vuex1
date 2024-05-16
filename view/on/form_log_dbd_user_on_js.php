@@ -53,5 +53,18 @@ function information_user_id_sha1_info() {
     }
 
   }
+
+
+
+ 
+
  </script>
  
+<script>
+
+function data_user() {
+    console.log("12345787") ; 
+  }
+
+
+</script>
