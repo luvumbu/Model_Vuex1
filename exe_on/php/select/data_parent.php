@@ -5,6 +5,7 @@
       $liste_projet_admin_name1_data = $databaseHandler01->tableList_info[0] ;
       $liste_projet_admin_name2_data = $databaseHandler01->tableList_info[1] ;    
 ?>
+
 <div class="card">
       <h2>            
             <input type="text" title="<?php echo $information_user_id_sha1 ?>" id="<?php  echo 'liste_projet_admin_name1_'.$information_user_id_sha1 ?>" onkeyup="liste_projet_admin_key_up(this)" value="<?php echo $liste_projet_admin_name1_data ?>">
