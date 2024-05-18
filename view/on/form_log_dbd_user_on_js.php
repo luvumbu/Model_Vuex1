@@ -17,7 +17,7 @@ const info_err = document.getElementById("info_err") ;
 
 
   const myTimeout = setTimeout(information_user_id_sha1_info, 250);
-  const myTimeout2 = setTimeout(information_user_id_sha1_info, 320);
+  const myTimeout2 = setTimeout(information_user_id_sha1_info, 400);
 
 
 function information_user_id_sha1_info() {

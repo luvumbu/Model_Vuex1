@@ -149,6 +149,11 @@ console.log(liste_projet_admin_name2.value) ;
 
 }
  
+
+ function add_picture(_this){
+ console.log(_this.title);  
+ window.location.href = "add_picture/index.php";
+ }
 </script>
 
 <style>

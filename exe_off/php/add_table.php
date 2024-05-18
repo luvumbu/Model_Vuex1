@@ -20,7 +20,11 @@ $databaseHandler->set_column_names("information_user_adresse_2");
 $databaseHandler->set_column_names("information_user_adresse_3");
 $databaseHandler->set_column_names("information_user_adresse_4");
 $databaseHandler->set_column_names("information_user_password");
-$databaseHandler->set_column_names("information_user_img");
+$databaseHandler->set_column_names("information_user_img_name");
+
+$databaseHandler->set_column_names("information_user_img_extennsion");
+$databaseHandler->set_column_names("information_user_img_path");
+
 $databaseHandler->set_column_names("information_user_born");
 
 $databaseHandler->set_column_names("information_user_number_1");
@@ -48,6 +52,8 @@ $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL"); 
 $databaseHandler->set_column_types("TEXT NOT NULL");
 
+$databaseHandler->set_column_types("TEXT NOT NULL");
+$databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");
 $databaseHandler->set_column_types("TEXT NOT NULL");

@@ -27,7 +27,11 @@ if(count($databaseHandler01->tableList_info)==0){
     $_SESSION["information_user_id_sha1"] = $time;
 
  
+ 
 
+
+
+ 
 
  
 // Fonction pour récupérer l'adresse IP de l'utilisateur
@@ -65,4 +69,18 @@ $_SESSION["information_user_password"] = $information_user_password ;
 $_SESSION["information_user_id_sha1"] = $databaseHandler00->tableList_info[0];
 }
  
+
+
+
+
+
+$dossier = "../../../src/img/".$_SESSION["information_user_id_sha1"] ; 
+
+// Créer le dossier
+if (!mkdir($dossier)) {
+    // Gérer les erreurs si la création du dossier échoue
+    echo 'Impossible de créer le dossier';
+} else {
+    echo 'Le dossier a été créé avec succès';
+}
 ?>
